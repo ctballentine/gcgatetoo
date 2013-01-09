@@ -1,0 +1,27 @@
+<h1>Listing diddies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Published</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diddies.each do |diddy| %>
+  <tr>
+    <td><%= diddy.name %></td>
+    <td><%= diddy.author %></td>
+    <td><%= diddy.published %></td>
+    <td><%= link_to 'Show', diddy %></td>
+    <td><%= link_to 'Edit', edit_diddy_path(diddy) %></td>
+    <td><%= link_to 'Destroy', diddy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diddy', new_diddy_path %>

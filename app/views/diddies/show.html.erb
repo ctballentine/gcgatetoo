@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @diddy.name %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @diddy.author %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%= @diddy.published %>
+</p>
+
+
+<%= link_to 'Edit', edit_diddy_path(@diddy) %> |
+<%= link_to 'Back', diddies_path %>

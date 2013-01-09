@@ -1,0 +1,29 @@
+<%= form_for(@diddy) do |f| %>
+  <% if @diddy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diddy.errors.count, "error") %> prohibited this diddy from being saved:</h2>
+
+      <ul>
+      <% @diddy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_area :author %>
+  </div>
+  <div class="field">
+    <%= f.label :published %><br />
+    <%= f.check_box :published %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
